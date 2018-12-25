@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          Visual Studio Code - Welcome to DIO Studio
+        
+    </title>
+
+    <link rel="canonical" href="https://dioleo.github.io/2018/11/26/VSCode-Portable/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">DIO&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://dioleo.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('VSCode-PortableBg.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#Windows" title="Windows">Windows</a>
+                        
+                          <a class="tag" href="/tags/#Software" title="Software">Software</a>
+                        
+                    </div>
+                    <h1>Visual Studio Code</h1>
+                    <h2 class="subheading">中文绿色便携版</h2>
+                    <span class="meta">
+                        Posted by DIO on
+                        2018-11-26
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>VSCode 出了有一段时间了,因为太忙,没有顾上体验,最近1.29版本发布,下载下来体验了一番,就果断把 Sublime Text 放在了第二梯队<br>VSCode 太好用了, electron 太棒了<br>于是着手准备 VSCode 便携化工作,网上很多相关资料,借鉴学习,在此记录.  </p>
+<hr>
+<h1 id="Overview-摘要"><a href="#Overview-摘要" class="headerlink" title="Overview 摘要"></a>Overview 摘要</h1><p>随意转载,注明出处 <a href="https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64" target="_blank" rel="noopener">https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64</a>  </p>
+<hr>
+<h2 id="Feature-特点"><a href="#Feature-特点" class="headerlink" title="Feature 特点"></a>Feature 特点</h2><ul>
+<li>解压即用,无需配置环境变量  </li>
+<li>集成 MinGW-w64 v6.0.0 ( VSCode版本 V1.29.0 )  </li>
+<li>集成 cpptools 0.20.1  </li>
+<li>集成 vscode-language-pack-zh-hans 1.29.2  </li>
+<li>可右键以<code>VSCode</code>打开  </li>
+<li>可自由更新  </li>
+</ul>
+<h2 id="Install-安装方法"><a href="#Install-安装方法" class="headerlink" title="Install 安装方法"></a>Install 安装方法</h2><ol>
+<li>下载压缩包<br>链接：<a href="https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw</a><br>提取码：ac25  </li>
+<li>解压缩(非中文目录)  </li>
+<li>运行安装目录下<code>Start.bat</code>  <blockquote>
+<p>不要直接运行 Code.exe !!!  </p>
+</blockquote>
+</li>
+</ol>
+<h2 id="History-更新日志"><a href="#History-更新日志" class="headerlink" title="History 更新日志"></a>History 更新日志</h2><ul>
+<li>V1.0 [2018.11.14]  </li>
+</ul>
+<h2 id="Document-制作教程"><a href="#Document-制作教程" class="headerlink" title="Document 制作教程"></a>Document 制作教程</h2><blockquote>
+<p>教程略繁琐,需要一定动手能力和足够的耐心和细心,脾气不好请直接下载傻瓜版本<br>需要的文件:VSCode,MinGW-w64编译环境  </p>
+</blockquote>
+<ol>
+<li>下载VSCode压缩包 <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">https://code.visualstudio.com/Download</a><br><img src="https://i.loli.net/2018/11/14/5bec15bda045c.png" alt="1.png"><br>解压到非中文目录,如 <code>D:\</code>  </li>
+<li>在安装目录中创建名为 <code>.portable</code> 的文件夹<br>在 <code>.portable</code> 文件夹下创建 <code>User</code> , <code>mingw64</code> 文件夹<br>在 <code>User</code> 文件夹下创建 <code>.vscode</code> , <code>AppData</code> , <code>Desktop</code> 文件夹<br>在 <code>.vscode</code> 文件夹下创建 <code>extensions</code> 文件夹<br>在 <code>AppData</code> 文件夹下创建 <code>Local</code> , <code>Roaming</code> 文件夹  <blockquote>
+<p>再强调一遍:耐心和细心  </p>
+</blockquote>
+</li>
+<li>回到安装目录,在安装目录中新建一个TXT文件夹,将下列代码复制并保存,更改文件名后缀为<code>.dat</code>  </li>
+</ol>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> /d %~dp0</span><br><span class="line"><span class="function">call:<span class="title">set_absolute_path</span> <span class="title">USERPROFILE</span> .\.<span class="title">portable</span>\<span class="title">User</span></span></span><br><span class="line"><span class="function"><span class="title">call:set_absolute_path</span> <span class="title">APPDATA</span> .\.<span class="title">portable</span>\<span class="title">User</span>\<span class="title">AppData</span>\<span class="title">Roaming</span></span></span><br><span class="line"><span class="function"><span class="title">call:set_absolute_path</span> <span class="title">mingwbin</span> .\.<span class="title">portable</span>\<span class="title">mingw64</span>\<span class="title">bin</span></span></span><br><span class="line"><span class="function"><span class="title">set</span> <span class="title">path</span>=%<span class="title">mingwbin</span>%;%<span class="title">path</span>%</span></span><br><span class="line"><span class="function"><span class="title">start</span> <span class="title">Code.exe</span> %1</span></span><br><span class="line"><span class="function"><span class="title">exit</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">:<span class="title">set_absolute_path</span></span></span><br><span class="line"><span class="function"><span class="title">for</span> /<span class="title">f</span> %%<span class="title">p</span> <span class="title">in</span> ("%2") <span class="title">do</span> (<span class="title">set</span> %1=%%~<span class="title">fp</span>)</span></span><br><span class="line"><span class="function"><span class="title">goto:eof</span></span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>下载编译环境离线安装包 x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0<br><a href="https://sourceforge.net/projects/mingw-w64/files/" target="_blank" rel="noopener">https://sourceforge.net/projects/mingw-w64/files/</a><br>往下拉,找到 MinGW-W64 GCC-8.1.0 -&gt; x86_64-win32-sjlj<br><img src="https://i.loli.net/2018/11/14/5bec1dd017079.png" alt="2.png"><br>seh结尾是纯64位编译.sjlj结尾是32,64两种编译,按需下载  </li>
+<li>下载完成后解压到刚才创建的 <code>.portable\mingw64</code> 目录下  </li>
+<li>运行安装目录下 <code>Start.bat</code>  </li>
+<li>添加右键菜单 <em>(可选)</em><br>右键 <code>AddShellLink.reg</code> 用编辑文件打开,更改其中路径值<br>双击安装目录下的 <code>AddShellLink.reg</code> 合并注册表<br>附注册表代码  </li>
+</ol>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line"></span><br><span class="line">;Open File</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode]</span><br><span class="line">@="Open with Code"</span><br><span class="line">"Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode\command]</span><br><span class="line">@="\"D:\\VSCode\\VSCode-x64\\<span class="built_in">Start</span>.bat\" \"%<span class="number">1</span>\""</span><br><span class="line"></span><br><span class="line">;Open Folder</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode]</span><br><span class="line">@="Open with Code"</span><br><span class="line">"Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]</span><br><span class="line">@="\"D:\\VSCode\\VSCode-x64\\<span class="built_in">Start</span>.bat\" \"%V\""</span><br></pre></td></tr></table></figure>
+<h2 id="Hello-World-测试"><a href="#Hello-World-测试" class="headerlink" title="Hello World 测试"></a>Hello World 测试</h2><ol>
+<li>打开VSCode,点击左侧文件标志,打开文件夹,(!注意,VSCode只支持文件夹下构建程序,从VC6.0过渡过来的需要适应一下!)  </li>
+<li>新建 <code>test.c</code> 文件,键入 <code>hello world</code> 代码<br>(!注意,VSCode跟某些IDE不同,生成的exe不会出现”Press any key to continue”,需要手动加 <code>getchar()</code> 或 <code>system(&quot;pause&quot;)</code>!)</li>
+<li>点击左侧调试按钮,如下图,添加调试,随便选一个,目的是生成 <code>launch.json</code> 文件<br><img src="https://i.loli.net/2018/11/14/5bec21a444058.png" alt="3.png">  </li>
+</ol>
+<p>然后将生成的 <code>launch.json</code> 文件代码删除,换成下面的并保存  </p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</span><br><span class="line"><span class="attr">"configurations"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"C++ Launch"</span>,</span><br><span class="line">        <span class="attr">"preLaunchTask"</span>: <span class="string">"build"</span>,</span><br><span class="line">        <span class="attr">"type"</span>: <span class="string">"cppdbg"</span>,</span><br><span class="line">        <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">        <span class="attr">"program"</span>: <span class="string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe"</span>,</span><br><span class="line">        <span class="attr">"args"</span>: [],</span><br><span class="line">        <span class="attr">"stopAtEntry"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">"cwd"</span>: <span class="string">"$&#123;fileDirname&#125;"</span>,</span><br><span class="line">        <span class="attr">"environment"</span>: [],</span><br><span class="line">        <span class="attr">"externalConsole"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"MIMode"</span>: <span class="string">"gdb"</span>,</span><br><span class="line">        <span class="attr">"miDebuggerPath"</span>: <span class="string">".\\.portable\\mingw64\\bin\\gdb.exe"</span>,</span><br><span class="line">        <span class="attr">"setupCommands"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"description"</span>: <span class="string">"Enable pretty-printing for gdb"</span>,</span><br><span class="line">                <span class="attr">"text"</span>: <span class="string">"-enable-pretty-printing"</span>,</span><br><span class="line">                <span class="attr">"ignoreFailures"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>按F5调试,此时肯定会报错,打开新生成的 <code>tasks.json</code> 文件<br>将生成的 <code>tasks.json</code> 文件代码删除,换成下面的并保存  </li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"2.0.0"</span>,</span><br><span class="line">    <span class="attr">"tasks"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"label"</span>: <span class="string">"build"</span>,</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"shell"</span>,</span><br><span class="line">            <span class="attr">"group"</span>: &#123;</span><br><span class="line">                <span class="attr">"kind"</span>: <span class="string">"build"</span>,</span><br><span class="line">                <span class="attr">"isDefault"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"presentation"</span>: &#123;</span><br><span class="line">                <span class="attr">"echo"</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">"reveal"</span>: <span class="string">"always"</span>,</span><br><span class="line">                <span class="attr">"focus"</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">"panel"</span>: <span class="string">"shared"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"windows"</span>: &#123;</span><br><span class="line">                <span class="attr">"command"</span>: <span class="string">"g++"</span>,</span><br><span class="line">                <span class="attr">"args"</span>: [</span><br><span class="line">                    <span class="string">"-ggdb"</span>,</span><br><span class="line">                    <span class="string">"\"$&#123;file&#125;\""</span>,</span><br><span class="line">                    <span class="string">"--std=c++11"</span>,</span><br><span class="line">                    <span class="string">"-o"</span>,</span><br><span class="line">                    <span class="string">"\"$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe\""</span></span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>此时再按下F5,即可看到程序成功运行<br><img src="https://i.loli.net/2018/11/14/5bec21a185487.png" alt="4.png">  </li>
+<li>大功告成!  </li>
+</ol>
+<hr>
+<h2 id="Reference-参考文献"><a href="#Reference-参考文献" class="headerlink" title="Reference 参考文献"></a>Reference 参考文献</h2><blockquote>
+<p>VSCode官方文档 <a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener">https://code.visualstudio.com/docs</a><br>CSDN_ID:黑猫崽儿 <a href="https://blog.csdn.net/c_duoduo/article/details/52083494" target="_blank" rel="noopener">https://blog.csdn.net/c_duoduo/article/details/52083494</a><br>DOS命令大全 <a href="https://www.cnblogs.com/zqifa/p/windows-dos-1.html" target="_blank" rel="noopener">https://www.cnblogs.com/zqifa/p/windows-dos-1.html</a>  </p>
+</blockquote>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/12/24/Windows-Tool/" data-toggle="tooltip" data-placement="top" title="Windows 10 实用工具">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2018/11/26/RTX51-Routine/" data-toggle="tooltip" data-placement="top" title="RTX51 Tiny">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Windows" title="Windows">Windows</a>
+                        
+                          <a class="tag" href="/tags/#Software" title="Software">Software</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="" target="_blank">虚位以待</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/DIOLeo">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; DIO 2018 
+                    <br>
+                    Build by <a href="https://hexo.io/zh-cn/">Hexo</a> 
+                    <!-- <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>  -->
+                    Make by <a href="https://github.com/DIOLeo">DIOLeo</a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=dioleo&repo=DIOLeo.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://dioleo.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://dioleo.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
