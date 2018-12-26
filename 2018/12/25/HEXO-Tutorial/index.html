@@ -230,19 +230,36 @@
 点击 <code>主题</code>  <img src="/2018/12/25/HEXO-Tutorial/HEXOTheme.png" title="HEXOTheme">  
 很多好看的主题!自己选一个!下载下来之后将文件夹放在 <code>themes</code> 文件夹下<br>打开 <code>_config.yml</code> ,找到 <code>theme:</code>,把后面的名字改成下载的主题的文件夹的名字(或者看作者的文档说明)  </li>
 </ol>
-<h2 id="自定义网页其他设置"><a href="#自定义网页其他设置" class="headerlink" title="自定义网页其他设置"></a>自定义网页其他设置</h2><p>依旧是 <code>_config.yml</code> ,里面的配置都是以键值对形式出现的,各自的作用基本上都有注释标注出来了,自行查看,大胆修改  </p>
-<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><p>在博客目录新建终端,输入 <code>hexo new post 文章名字(英文)</code><br>这个时候在 <code>source\_posts</code> 文件夹下就有 <code>文章名字.md</code> 的文件<br>看到这里有的朋友就懂了<br>对, <code>HEXO</code> 原生支持 <code>Markdown</code><br>至于 <code>Markdown</code> 怎么写,请参考下面文章<br><a href="http://www.markdown.cn/#editor" target="_blank" rel="noopener">http://www.markdown.cn/#editor</a><br><a href="https://sspai.com/post/25137" target="_blank" rel="noopener">https://sspai.com/post/25137</a><br><a href="http://younghz.github.io/Markdown/" target="_blank" rel="noopener">http://younghz.github.io/Markdown/</a><br>这里也有一些免费的在线编辑器<br><a href="https://dillinger.io/" target="_blank" rel="noopener">https://dillinger.io/</a><br><a href="https://pandao.github.io/editor.md/" target="_blank" rel="noopener">https://pandao.github.io/editor.md/</a><br><a href="http://md.barretlee.com/" target="_blank" rel="noopener">http://md.barretlee.com/</a><br>总之,写好文章保存即可,发挥你的创造力,人人都是灵感师  </p>
-<h2 id="生成网页"><a href="#生成网页" class="headerlink" title="生成网页"></a>生成网页</h2><p>在博客目录新建终端,输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean      //清除旧生成文件,其实就是删除public文件夹和清除db.json文件里无用的内容</span><br><span class="line">hexo generate   //也可简写成hexo g,这一步就是生成我们要的静态网页,这一步执行成功后去public文件夹下看就有很多网页了</span><br><span class="line">hexo server     //也可简写成hexo s,这一步是用来本地预览我们做好的网站</span><br></pre></td></tr></table></figure></p>
-<p><code>hexo server</code> 命令执行成功后,浏览器打开<a href="http://localhost:4000/即可看到你的博客长啥样" target="_blank" rel="noopener">http://localhost:4000/即可看到你的博客长啥样</a>  </p>
+<h2 id="自定义网页其他设置"><a href="#自定义网页其他设置" class="headerlink" title="自定义网页其他设置"></a>自定义网页其他设置</h2><ol>
+<li>依旧是 <code>_config.yml</code> ,里面的配置都是以键值对形式出现的,各自的作用基本上都有注释标注出来了,自行查看,大胆修改  </li>
+</ol>
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol>
+<li><p>在博客目录新建终端,输入 <code>hexo new post 文章名字(英文)</code><br>这个时候在 <code>source\_posts</code> 文件夹下就有 <code>文章名字.md</code> 的文件<br>看到这里有的朋友就懂了<br>对, <code>HEXO</code> 原生支持 <code>Markdown</code>  </p>
+</li>
+<li><p>至于 <code>Markdown</code> 怎么写,请参考下面文章<br><a href="http://www.markdown.cn/#editor" target="_blank" rel="noopener">http://www.markdown.cn/#editor</a><br><a href="https://sspai.com/post/25137" target="_blank" rel="noopener">https://sspai.com/post/25137</a><br><a href="http://younghz.github.io/Markdown/" target="_blank" rel="noopener">http://younghz.github.io/Markdown/</a><br>这里也有一些免费的在线编辑器<br><a href="https://dillinger.io/" target="_blank" rel="noopener">https://dillinger.io/</a><br><a href="https://pandao.github.io/editor.md/" target="_blank" rel="noopener">https://pandao.github.io/editor.md/</a><br><a href="http://md.barretlee.com/" target="_blank" rel="noopener">http://md.barretlee.com/</a><br>总之,写好文章保存即可,发挥你的创造力,人人都是灵感师  </p>
+</li>
+</ol>
+<h2 id="生成网页"><a href="#生成网页" class="headerlink" title="生成网页"></a>生成网页</h2><ol>
+<li><p>在博客目录新建终端,输入  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean      //清除旧生成文件,其实就是删除public文件夹和清除db.json文件里无用的内容</span><br><span class="line">hexo generate   //也可简写成hexo g,这一步就是生成我们要的静态网页,这一步执行成功后去public文件夹下看就有很多网页了</span><br><span class="line">hexo server     //也可简写成hexo s,这一步是用来本地预览我们做好的网站</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>hexo server</code> 命令执行成功后,就可在浏览器中输入以下网址本地预览<br><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>  </p>
+</li>
+</ol>
 <blockquote>
-<p>这个时候来解释一下啊为什么用 HEXO 不用 Jekyll<br>Jekyll 写的文章多的时候太慢了,HEXO 更快一点<br>Jekyll 环境比较难搭建<br>Jekyll 对 Markdown 支持得并不是很好<br>但是 Github.io 原生支持 Jekyll,也就是说不需要我们自己生成(免去了hexo generate这一步,直接把源码粘贴到仓库目录下就会被自动解析,更省事儿)<br>所以其中的利害各位自己权衡  </p>
+<p>这个时候来解释一下为什么用 HEXO 不用 Jekyll<br>Jekyll 写的文章多的时候太慢了,HEXO 更快一点<br>Jekyll 环境比较难搭建<br>Jekyll 对 Markdown 支持得并不是很好<br>但是 Github.io 原生支持 Jekyll,也就是说不需要我们自己生成(免去了hexo generate这一步,直接把源码粘贴到仓库目录下就会被自动解析,更省事儿)<br>所以其中的利害各位自己权衡  </p>
 </blockquote>
 <hr>
 <h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><blockquote>
 <p>激动人心的时刻马上就要来临!  </p>
 </blockquote>
-<p>刚才 <code>hexo generate</code> 执行成功过后,把博客目录下 <code>public</code> 文件夹里的东西复制出来<br>粘贴到你创建的仓库的根目录<br>大胆地粘贴<br>这个时候Github Desktop会自动检测到你的文件有改动,这时填写 <code>Summary</code> 并 <code>Push</code> 就可以了!就像这样:<br><img src="/2018/12/25/HEXO-Tutorial/GithubDesktopPush.png" title="GithubDesktopPush">  </p>
-<p>网速状况时好时坏,稍等一会儿输入你的博客网址(https://用户名.github.io)就能看到属于自己的网站了!<br>至于详细的其他的各种配置,自行查阅<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>是最佳选择,也可广泛借助互联网的力量  </p>
+<ol>
+<li><p>刚才 <code>hexo generate</code> 执行成功过后,把博客目录下 <code>public</code> 文件夹里的东西复制出来<br>粘贴到你创建的仓库的根目录<br>大胆地粘贴<br>这个时候Github Desktop会自动检测到你的文件有改动,这时填写 <code>Summary</code> 并 <code>Push</code> 就可以了!就像这样:  </p>
+<img src="/2018/12/25/HEXO-Tutorial/GithubDesktopPush.png" title="GithubDesktopPush">  
+</li>
+<li><p>网速状况时好时坏,稍等一会儿输入你的博客网址(https://用户名.github.io)就能看到属于自己的网站了!<br>至于详细的其他的各种配置,自行查阅<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>是最佳选择,也可广泛借助互联网的力量  </p>
+</li>
+</ol>
 <hr>
 <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><blockquote>
 <p>HEXO <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a>  </p>
