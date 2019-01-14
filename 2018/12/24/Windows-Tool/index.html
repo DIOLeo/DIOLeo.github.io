@@ -188,6 +188,16 @@
 
                 <p>做系统是常事,捣鼓系统设置也是常事,随着时间流淌积累了越来越多的实用工具<br>有的是网上找的,有的是自己写的,在此做一个集中整理<br>本文会对注册表进行大量修改,数据无价,请务必备份<br>持续更新,敬请关注.  </p>
 <hr>
+<h1 id="Windows10-禁用-Windows-Update"><a href="#Windows10-禁用-Windows-Update" class="headerlink" title="Windows10 禁用 Windows Update"></a>Windows10 禁用 Windows Update</h1><ol>
+<li>管理员身份运行cmd  </li>
+<li>分别复制下面两行代码,回车运行  </li>
+<li>1803之前版本 Windows10 系统只需要第一行  </li>
+</ol>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">REG add "HKLM\SYSTEM\CurrentControlSet\Services\wuauserv" /v "<span class="built_in">Start</span>" /t REG_DWORD /d "<span class="number">4</span>" /f</span><br><span class="line">REG add "HKLM\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc" /v "<span class="built_in">Start</span>" /t REG_DWORD /d "<span class="number">4</span>" /f</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在Windows操作系统中,服务项一般在以下注册表项中:<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<br>每一个服务都由其服务名称设立单独文件夹,其中 <code>Start</code> 一项数字意义说明:<br>1 = 自动(延迟启动)<br>2 = 自动<br>3 = 手动<br>4 = 禁用<br>想单独禁用其他服务原理相同,只需要查看服务名称将上述命令替换即可<br>1803版本之后,微软新添加 <code>windows update medic service</code> 服务,它就像一个保镖,保护被关闭的 <code>windows update</code> 服务再次开启,所以两个服务都关闭才算彻底禁用更新  </p>
+</blockquote>
+<hr>
 <h1 id="更改系统字体-微软雅黑-为-宋体"><a href="#更改系统字体-微软雅黑-为-宋体" class="headerlink" title="更改系统字体 微软雅黑 为 宋体"></a>更改系统字体 微软雅黑 为 宋体</h1><blockquote>
 <p><strong>请注意,此注册表会导致 微软雅黑 字体无法使用!</strong>  </p>
 </blockquote>
@@ -410,7 +420,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; DIO 2018 
+                    Copyright &copy; DIO 2019 
                     <br>
                     Build by <a href="https://hexo.io/zh-cn/">Hexo</a> 
                     <!-- <span style="display: inline-block; margin: 0 5px;">
