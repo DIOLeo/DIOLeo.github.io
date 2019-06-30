@@ -191,6 +191,35 @@
 <h1 id="Overview-摘要"><a href="#Overview-摘要" class="headerlink" title="Overview 摘要"></a>Overview 摘要</h1><p>随意转载,注明出处 <a href="https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64" target="_blank" rel="noopener">https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64</a>  </p>
 <hr>
 <h2 id="Feature-特点"><a href="#Feature-特点" class="headerlink" title="Feature 特点"></a>Feature 特点</h2><ul>
+<li>解压即用,无需配置环境变量</li>
+<li>集成 cpptools</li>
+<li>集成 vscode-language-pack-zh-hans</li>
+<li>集成 open-html-in-browser</li>
+<li>集成 markdown-pdf</li>
+<li>集成 python</li>
+<li>包含右键以<code>VSCode</code>打开注册表工具</li>
+<li>可自由更新</li>
+</ul>
+<h2 id="Install-安装方法"><a href="#Install-安装方法" class="headerlink" title="Install 安装方法"></a>Install 安装方法</h2><ol>
+<li>下载压缩包<br>链接：<a href="https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw</a><br>提取码：ac25  </li>
+<li>解压缩(非中文目录)  </li>
+<li>直接运行 Code.exe  </li>
+</ol>
+<h2 id="History-更新日志"><a href="#History-更新日志" class="headerlink" title="History 更新日志"></a>History 更新日志</h2><ul>
+<li>V1.34 [2019.05.27] VSCode版本 V1.34.0  </li>
+<li>V1.35 [2019.06.29] VSCode版本 V1.35.1  </li>
+</ul>
+<h2 id="Document-制作教程"><a href="#Document-制作教程" class="headerlink" title="Document 制作教程"></a>Document 制作教程</h2><blockquote>
+<p>需要的文件:VSCode  </p>
+<ol>
+<li>下载VSCode压缩包 <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">https://code.visualstudio.com/Download</a><br><img src="https://i.loli.net/2018/11/14/5bec15bda045c.png" alt="1.png"><br>解压到非中文目录,如 <code>D:\</code>  </li>
+<li>在安装目录中创建名为 <code>data</code> 的文件夹<br>在 <code>data</code> 文件夹下创建 <code>extensions</code> , <code>temp</code> , <code>user-data</code> 文件夹  </li>
+<li>添加右键菜单 <em>(可选)</em><br>右键 <code>AddShellLink.reg</code> 用编辑文件打开,更改其中路径值<br>双击安装目录下的 <code>AddShellLink.reg</code> 合并注册表<br>附注册表代码  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">;Open File</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode]</span><br><span class="line">@=&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;D:\\VSCode\\VSCode-x64\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode\command]</span><br><span class="line">@=&quot;\&quot;D:\\VSCode\\VSCode-x64\\Start.bat\&quot; \&quot;%1\&quot;&quot;</span><br><span class="line"></span><br><span class="line">;Open Folder</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode]</span><br><span class="line">@=&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;D:\\VSCode\\VSCode-x64\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]</span><br><span class="line">@=&quot;\&quot;D:\\VSCode\\VSCode-x64\\Start.bat\&quot; \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="以下内容为V1-33-1以前的旧版文档-仅作备份"><a href="#以下内容为V1-33-1以前的旧版文档-仅作备份" class="headerlink" title="以下内容为V1.33.1以前的旧版文档,仅作备份"></a>以下内容为V1.33.1以前的旧版文档,仅作备份</h2><h2 id="Feature-特点-1"><a href="#Feature-特点-1" class="headerlink" title="Feature 特点"></a>Feature 特点</h2><ul>
 <li>解压即用,无需配置环境变量  </li>
 <li>集成 MinGW-w64 v6.0.0  </li>
 <li>集成 cpptools  </li>
@@ -200,50 +229,102 @@
 <li>可右键以<code>VSCode</code>打开  </li>
 <li>可自由更新  </li>
 </ul>
-<h2 id="Install-安装方法"><a href="#Install-安装方法" class="headerlink" title="Install 安装方法"></a>Install 安装方法</h2><ol>
+<h2 id="Install-安装方法-1"><a href="#Install-安装方法-1" class="headerlink" title="Install 安装方法"></a>Install 安装方法</h2><ol>
 <li>下载压缩包<br>链接：<a href="https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw</a><br>提取码：ac25  </li>
 <li>解压缩(非中文目录)  </li>
 <li>运行安装目录下<code>Start.bat</code>  <blockquote>
-<p>不要直接运行 Code.exe !!!  </p>
+<p>不要直接运行 Code.exe !!!</p>
 </blockquote>
 </li>
 </ol>
-<h2 id="History-更新日志"><a href="#History-更新日志" class="headerlink" title="History 更新日志"></a>History 更新日志</h2><ul>
+<h2 id="History-更新日志-1"><a href="#History-更新日志-1" class="headerlink" title="History 更新日志"></a>History 更新日志</h2><ul>
 <li>V1.0 [2018.11.14] VSCode版本 V1.29.0  </li>
 <li>V1.1 [2019.02.10] VSCode版本 V1.31.0  </li>
 <li>V1.2 [2019.04.08] VSCode版本 V1.33.0  </li>
 </ul>
-<h2 id="Document-制作教程"><a href="#Document-制作教程" class="headerlink" title="Document 制作教程"></a>Document 制作教程</h2><blockquote>
+<h2 id="Document-制作教程-1"><a href="#Document-制作教程-1" class="headerlink" title="Document 制作教程"></a>Document 制作教程</h2><blockquote>
 <p>教程略繁琐,需要一定动手能力和足够的耐心和细心,脾气不好请直接下载傻瓜版本<br>需要的文件:VSCode,MinGW-w64编译环境  </p>
-</blockquote>
 <ol>
 <li>下载VSCode压缩包 <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">https://code.visualstudio.com/Download</a><br><img src="https://i.loli.net/2018/11/14/5bec15bda045c.png" alt="1.png"><br>解压到非中文目录,如 <code>D:\</code>  </li>
-<li>在安装目录中创建名为 <code>.portable</code> 的文件夹<br>在 <code>.portable</code> 文件夹下创建 <code>User</code> , <code>mingw64</code> 文件夹<br>在 <code>User</code> 文件夹下创建 <code>.vscode</code> , <code>AppData</code> , <code>Desktop</code> 文件夹<br>在 <code>.vscode</code> 文件夹下创建 <code>extensions</code> 文件夹<br>在 <code>AppData</code> 文件夹下创建 <code>Local</code> , <code>Roaming</code> 文件夹  <blockquote>
-<p>再强调一遍:耐心和细心  </p>
-</blockquote>
+<li>在安装目录中创建名为 <code>.portable</code> 的文件夹<br>在 <code>.portable</code> 文件夹下创建 <code>User</code> , <code>mingw64</code> 文件夹<br>在 <code>User</code> 文件夹下创建 <code>.vscode</code> , <code>AppData</code> , <code>Desktop</code> 文件夹<br>在 <code>.vscode</code> 文件夹下创建 <code>extensions</code> 文件夹<br>在 <code>AppData</code> 文件夹下创建 <code>Local</code> , <code>Roaming</code> 文件夹<br>再强调一遍:耐心和细心  </li>
+<li>回到安装目录,在安装目录中新建一个TXT文件夹,将下列代码复制并保存,更改文件名后缀为<code>.bat</code>  <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> /d %~dp0</span><br><span class="line"><span class="function">call:<span class="title">set_absolute_path</span> <span class="title">USERPROFILE</span> .\.<span class="title">portable</span>\<span class="title">User</span></span></span><br><span class="line"><span class="function"><span class="title">call:set_absolute_path</span> <span class="title">APPDATA</span> .\.<span class="title">portable</span>\<span class="title">User</span>\<span class="title">AppData</span>\<span class="title">Roaming</span></span></span><br><span class="line"><span class="function"><span class="title">call:set_absolute_path</span> <span class="title">mingwbin</span> .\.<span class="title">portable</span>\<span class="title">mingw64</span>\<span class="title">bin</span></span></span><br><span class="line"><span class="function"><span class="title">set</span> <span class="title">path</span>=%<span class="title">mingwbin</span>%;%<span class="title">path</span>%</span></span><br><span class="line"><span class="function"><span class="title">start</span> <span class="title">Code.exe</span> %1</span></span><br><span class="line"><span class="function"><span class="title">exit</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">:<span class="title">set_absolute_path</span></span></span><br><span class="line"><span class="function"><span class="title">for</span> /<span class="title">f</span> %%<span class="title">p</span> <span class="title">in</span> ("%2") <span class="title">do</span> (<span class="title">set</span> %1=%%~<span class="title">fp</span>)</span></span><br><span class="line"><span class="function"><span class="title">goto:eof</span> </span></span><br><span class="line"><span class="function">```  </span></span><br><span class="line"><span class="function">4. 下载编译环境离线安装包 <span class="title">x86_64</span>-8.1.0-<span class="title">release</span>-<span class="title">win32</span>-<span class="title">sjlj</span>-<span class="title">rt_v6</span>-<span class="title">rev0</span>  </span></span><br><span class="line"><span class="function"><span class="title">https</span>://<span class="title">sourceforge.net</span>/<span class="title">projects</span>/<span class="title">mingw</span>-<span class="title">w64</span>/<span class="title">files</span>/  </span></span><br><span class="line"><span class="function">往下拉,找到 <span class="title">MinGW</span>-<span class="title">W64</span> <span class="title">GCC</span>-8.1.0 -&gt; <span class="title">x86_64</span>-<span class="title">win32</span>-<span class="title">sjlj</span>  </span></span><br><span class="line"><span class="function">![2.<span class="title">png</span>](<span class="title">https</span>://<span class="title">i.loli.net</span>/2018/11/14/5<span class="title">bec1dd017079.png</span>)  </span></span><br><span class="line"><span class="function"><span class="title">seh</span>结尾是纯64位编译.<span class="title">sjlj</span>结尾是32,64两种编译,按需下载  </span></span><br><span class="line"><span class="function">5. 下载完成后解压到刚才创建的 `.<span class="title">portable</span>\<span class="title">mingw64</span>` 目录下  </span></span><br><span class="line"><span class="function">6. 运行安装目录下 `<span class="title">Start.bat</span>`  </span></span><br><span class="line"><span class="function">7. 添加右键菜单 *(可选)*  </span></span><br><span class="line"><span class="function">右键 `<span class="title">AddShellLink.reg</span>` 用编辑文件打开,更改其中路径值  </span></span><br><span class="line"><span class="function">双击安装目录下的 `<span class="title">AddShellLink.reg</span>` 合并注册表  </span></span><br><span class="line"><span class="function">附注册表代码</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>回到安装目录,在安装目录中新建一个TXT文件夹,将下列代码复制并保存,更改文件名后缀为<code>.dat</code>  </li>
 </ol>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> /d %~dp0</span><br><span class="line"><span class="function">call:<span class="title">set_absolute_path</span> <span class="title">USERPROFILE</span> .\.<span class="title">portable</span>\<span class="title">User</span></span></span><br><span class="line"><span class="function"><span class="title">call:set_absolute_path</span> <span class="title">APPDATA</span> .\.<span class="title">portable</span>\<span class="title">User</span>\<span class="title">AppData</span>\<span class="title">Roaming</span></span></span><br><span class="line"><span class="function"><span class="title">call:set_absolute_path</span> <span class="title">mingwbin</span> .\.<span class="title">portable</span>\<span class="title">mingw64</span>\<span class="title">bin</span></span></span><br><span class="line"><span class="function"><span class="title">set</span> <span class="title">path</span>=%<span class="title">mingwbin</span>%;%<span class="title">path</span>%</span></span><br><span class="line"><span class="function"><span class="title">start</span> <span class="title">Code.exe</span> %1</span></span><br><span class="line"><span class="function"><span class="title">exit</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">:<span class="title">set_absolute_path</span></span></span><br><span class="line"><span class="function"><span class="title">for</span> /<span class="title">f</span> %%<span class="title">p</span> <span class="title">in</span> ("%2") <span class="title">do</span> (<span class="title">set</span> %1=%%~<span class="title">fp</span>)</span></span><br><span class="line"><span class="function"><span class="title">goto:eof</span></span></span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>下载编译环境离线安装包 x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0<br><a href="https://sourceforge.net/projects/mingw-w64/files/" target="_blank" rel="noopener">https://sourceforge.net/projects/mingw-w64/files/</a><br>往下拉,找到 MinGW-W64 GCC-8.1.0 -&gt; x86_64-win32-sjlj<br><img src="https://i.loli.net/2018/11/14/5bec1dd017079.png" alt="2.png"><br>seh结尾是纯64位编译.sjlj结尾是32,64两种编译,按需下载  </li>
-<li>下载完成后解压到刚才创建的 <code>.portable\mingw64</code> 目录下  </li>
-<li>运行安装目录下 <code>Start.bat</code>  </li>
-<li>添加右键菜单 <em>(可选)</em><br>右键 <code>AddShellLink.reg</code> 用编辑文件打开,更改其中路径值<br>双击安装目录下的 <code>AddShellLink.reg</code> 合并注册表<br>附注册表代码  </li>
-</ol>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line"></span><br><span class="line">;Open File</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode]</span><br><span class="line">@="Open with Code"</span><br><span class="line">"Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode\command]</span><br><span class="line">@="\"D:\\VSCode\\VSCode-x64\\<span class="built_in">Start</span>.bat\" \"%<span class="number">1</span>\""</span><br><span class="line"></span><br><span class="line">;Open Folder</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode]</span><br><span class="line">@="Open with Code"</span><br><span class="line">"Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]</span><br><span class="line">@="\"D:\\VSCode\\VSCode-x64\\<span class="built_in">Start</span>.bat\" \"%V\""</span><br></pre></td></tr></table></figure>
-<h2 id="Hello-World-测试"><a href="#Hello-World-测试" class="headerlink" title="Hello World 测试"></a>Hello World 测试</h2><ol>
-<li>打开VSCode,点击左侧文件标志,打开文件夹,(!注意,VSCode只支持文件夹下构建程序,从VC6.0过渡过来的需要适应一下!)  </li>
-<li>新建 <code>test.c</code> 文件,键入 <code>hello world</code> 代码<br>(!注意,VSCode跟某些IDE不同,生成的exe不会出现”Press any key to continue”,需要手动加 <code>getchar()</code> 或 <code>system(&quot;pause&quot;)</code>!)</li>
-<li>点击左侧调试按钮,如下图,添加调试,随便选一个,目的是生成 <code>launch.json</code> 文件<br><img src="https://i.loli.net/2018/11/14/5bec21a444058.png" alt="3.png">  </li>
-</ol>
-<p>然后将生成的 <code>launch.json</code> 文件代码删除,换成下面的并保存  </p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</span><br><span class="line"><span class="attr">"configurations"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"C++ Launch"</span>,</span><br><span class="line">        <span class="attr">"preLaunchTask"</span>: <span class="string">"build"</span>,</span><br><span class="line">        <span class="attr">"type"</span>: <span class="string">"cppdbg"</span>,</span><br><span class="line">        <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">        <span class="attr">"program"</span>: <span class="string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe"</span>,</span><br><span class="line">        <span class="attr">"args"</span>: [],</span><br><span class="line">        <span class="attr">"stopAtEntry"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">"cwd"</span>: <span class="string">"$&#123;fileDirname&#125;"</span>,</span><br><span class="line">        <span class="attr">"environment"</span>: [],</span><br><span class="line">        <span class="attr">"externalConsole"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"MIMode"</span>: <span class="string">"gdb"</span>,</span><br><span class="line">        <span class="attr">"miDebuggerPath"</span>: <span class="string">".\\.portable\\mingw64\\bin\\gdb.exe"</span>,</span><br><span class="line">        <span class="attr">"setupCommands"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"description"</span>: <span class="string">"Enable pretty-printing for gdb"</span>,</span><br><span class="line">                <span class="attr">"text"</span>: <span class="string">"-enable-pretty-printing"</span>,</span><br><span class="line">                <span class="attr">"ignoreFailures"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>按F5调试,此时肯定会报错,打开新生成的 <code>tasks.json</code> 文件<br>将生成的 <code>tasks.json</code> 文件代码删除,换成下面的并保存  </li>
-</ol>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"2.0.0"</span>,</span><br><span class="line">    <span class="attr">"tasks"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"label"</span>: <span class="string">"build"</span>,</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"shell"</span>,</span><br><span class="line">            <span class="attr">"group"</span>: &#123;</span><br><span class="line">                <span class="attr">"kind"</span>: <span class="string">"build"</span>,</span><br><span class="line">                <span class="attr">"isDefault"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"presentation"</span>: &#123;</span><br><span class="line">                <span class="attr">"echo"</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">"reveal"</span>: <span class="string">"always"</span>,</span><br><span class="line">                <span class="attr">"focus"</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">"panel"</span>: <span class="string">"shared"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"windows"</span>: &#123;</span><br><span class="line">                <span class="attr">"command"</span>: <span class="string">"g++"</span>,</span><br><span class="line">                <span class="attr">"args"</span>: [</span><br><span class="line">                    <span class="string">"-ggdb"</span>,</span><br><span class="line">                    <span class="string">"\"$&#123;file&#125;\""</span>,</span><br><span class="line">                    <span class="string">"--std=c++11"</span>,</span><br><span class="line">                    <span class="string">"-o"</span>,</span><br><span class="line">                    <span class="string">"\"$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe\""</span></span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="5">
+</blockquote>
+<p>Windows Registry Editor Version 5.00</p>
+<p>;Open File</p>
+<p>[HKEY_CLASSES_ROOT*\shell\VSCode]<br>@=”Open with Code”<br>“Icon”=”D:\VSCode\VSCode-x64\Code.exe”</p>
+<p>[HKEY_CLASSES_ROOT*\shell\VSCode\command]<br>@=”\”D:\VSCode\VSCode-x64\Start.bat\” \”%1\””</p>
+<p>;Open Folder</p>
+<p>[HKEY_CLASSES_ROOT\Directory\shell\VSCode]<br>@=”Open with Code”<br>“Icon”=”D:\VSCode\VSCode-x64\Code.exe”</p>
+<p>[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]<br>@=”\”D:\VSCode\VSCode-x64\Start.bat\” \”%V\””</p>
+<pre><code>
+## Hello World 测试
+1. 打开VSCode,点击左侧文件标志,打开文件夹,(!注意,VSCode只支持文件夹下构建程序,从VC6.0过渡过来的需要适应一下!)  
+2. 新建 `test.c` 文件,键入 `hello world` 代码  
+(!注意,VSCode跟某些IDE不同,生成的exe不会出现&quot;Press any key to continue&quot;,需要手动加 `getchar()` 或 `system(&quot;pause&quot;)`!)
+3. 点击左侧调试按钮,如下图,添加调试,随便选一个,目的是生成 `launch.json` 文件  
+![3.png](https://i.loli.net/2018/11/14/5bec21a444058.png)  
+
+然后将生成的 `launch.json` 文件代码删除,换成下面的并保存  
+```json
+{
+&quot;version&quot;: &quot;0.2.0&quot;,
+&quot;configurations&quot;: [
+    {
+        &quot;name&quot;: &quot;C++ Launch&quot;,
+        &quot;preLaunchTask&quot;: &quot;build&quot;,
+        &quot;type&quot;: &quot;cppdbg&quot;,
+        &quot;request&quot;: &quot;launch&quot;,
+        &quot;program&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}.exe&quot;,
+        &quot;args&quot;: [],
+        &quot;stopAtEntry&quot;: false,
+        &quot;cwd&quot;: &quot;${fileDirname}&quot;,
+        &quot;environment&quot;: [],
+        &quot;externalConsole&quot;: true,
+        &quot;MIMode&quot;: &quot;gdb&quot;,
+        &quot;miDebuggerPath&quot;: &quot;.\\.portable\\mingw64\\bin\\gdb.exe&quot;,
+        &quot;setupCommands&quot;: [
+            {
+                &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
+                &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
+                &quot;ignoreFailures&quot;: true
+            }
+        ]
+    }]
+}
+</code></pre><ol start="4">
+<li>按F5调试,此时肯定会报错,打开新生成的 <code>tasks.json</code> 文件<br>将生成的 <code>tasks.json</code> 文件代码删除,换成下面的并保存  <pre><code class="json">{
+ <span class="attr">"version"</span>: <span class="string">"2.0.0"</span>,
+ <span class="attr">"tasks"</span>: [
+     {
+         <span class="attr">"label"</span>: <span class="string">"build"</span>,
+         <span class="attr">"type"</span>: <span class="string">"shell"</span>,
+         <span class="attr">"group"</span>: {
+             <span class="attr">"kind"</span>: <span class="string">"build"</span>,
+             <span class="attr">"isDefault"</span>: <span class="literal">true</span>
+         },
+         <span class="attr">"presentation"</span>: {
+             <span class="attr">"echo"</span>: <span class="literal">true</span>,
+             <span class="attr">"reveal"</span>: <span class="string">"always"</span>,
+             <span class="attr">"focus"</span>: <span class="literal">false</span>,
+             <span class="attr">"panel"</span>: <span class="string">"shared"</span>
+         },
+         <span class="attr">"windows"</span>: {
+             <span class="attr">"command"</span>: <span class="string">"g++"</span>,
+             <span class="attr">"args"</span>: [
+                 <span class="string">"-ggdb"</span>,
+                 <span class="string">"\"${file}\""</span>,
+                 <span class="string">"--std=c++11"</span>,
+                 <span class="string">"-o"</span>,
+                 <span class="string">"\"${fileDirname}\\${fileBasenameNoExtension}.exe\""</span>
+             ]
+         }
+     }
+ ]
+}
+</code></pre>
+</li>
 <li>此时再按下F5,即可看到程序成功运行<br><img src="https://i.loli.net/2018/11/14/5bec21a185487.png" alt="4.png">  </li>
 <li>大功告成!  </li>
 </ol>
