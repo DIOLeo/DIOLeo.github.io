@@ -13,11 +13,11 @@
 
     <title>
         
-          About - Welcome to DIO Studio
+          Welcome to DIO Studio
         
     </title>
 
-    <link rel="canonical" href="https://dioleo.github.io/about/">
+    <link rel="canonical" href="https://dioleo.github.io/tags/Collection/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -140,140 +140,7 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/about/index/AboutBg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>About</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">关于</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <h1 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h1><p>这里是DIO Studio的技术小站~(≧▽≦)/~<br>这里会分享学习经历,有趣的的软件和技术<br>为了自己学到的知识有个备份<br>所以更新会很慢<br>所以不要常来,偶尔来看看就好(如果你喜欢的话)  </p>
-<blockquote>
-<p>感谢 <code>Kaijun</code> 的主题 <a href="https://github.com/Kaijun/hexo-theme-huxblog" target="_blank" rel="noopener">Huxblog</a></p>
-</blockquote>
-<h1 id="Contact-me"><a href="#Contact-me" class="headerlink" title="Contact me"></a>Contact me</h1><p>邮件往来，非诚勿扰<br><a href="mailto:diodev@outlook.com" target="_blank" rel="noopener">diodev@outlook.com</a>  </p>
-
-
-                <!-- 如果开启评论功能 -->
-                
-
-            </div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                        
-                            
-                            <a href="/tags/#Embedd" title="Embedd" rel="2">Embedd</a>
-                            
-                        
-                            
-                            <a href="/tags/#Windows" title="Windows" rel="4">Windows</a>
-                            
-                        
-                            
-                            <a href="/tags/#Collection" title="Collection" rel="2">Collection</a>
-                            
-                        
-                            
-                        
-                            
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
-                    <div class="short-about">
-
-                        
-                            <img src="/img/avatar.jpg">
-                        
-
-                        
-                            <p>竹影扫阶尘不动,月穿潭底水无痕</p>
-                        
-
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            
-                            
-
-                            
-
-                            
-
-                            
-                                <li>
-                                    <a target="_blank" href="https://github.com/DIOLeo">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-                            
-                            
-                            
-                        </ul>
-                    </div>
-                </section>
-                
-                <!-- Friends Blog -->
-                
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-
-                    
-                        <li><a href="" target="_blank">虚位以待</a></li>
-                    
-                </ul>
-                
-            </div>
-        
-    </div>
-</div>
-
+    <!-- Default Archive layout, we use archives instead. -->
 
     <!-- Footer -->
     <!-- Footer -->
@@ -393,50 +260,6 @@
 
 
 <!-- Side Catalog -->
-
-<script type="text/javascript">
-    function generateCatalog (selector) {
-        var P = $('div.post-container'),a,n,t,l,i,c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#"+$(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
-            l = $('<li class="'+n+'_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;    
-    }
-
-    generateCatalog(".catalog-body");
-
-    // toggle side catalog
-    $(".catalog-toggle").click((function(e){
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    /*
-     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
-     * Fork by Hux to support padding
-     */
-    async("/js/jquery.nav.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
 
 
 
